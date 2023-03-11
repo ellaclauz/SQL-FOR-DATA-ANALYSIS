@@ -25,6 +25,14 @@ RESULT:
 ![S2](https://user-images.githubusercontent.com/100838547/224490032-fcd48f03-6b2a-4a76-a0f8-f4d74d25819d.png)
 
 * what is the maximum warehouse sales for each item description?
+
+QUERY:
+![image](https://user-images.githubusercontent.com/100838547/224490206-05217b28-21c9-4d4d-8285-40514de9a18e.png)
+
+RESULT:
+
+![S3](https://user-images.githubusercontent.com/100838547/224490291-90dffa9b-fa4e-4514-8df8-5f2ffbb4cb28.png)
+
 * what is the average retail transfer for each year 
 * for each item description, what is the difference between the maximum and minimum retail sales? 
 * what is the total retail sales for each supplier, broken down by year and month 
