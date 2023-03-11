@@ -59,6 +59,14 @@ RESULT:
 ![S6](https://user-images.githubusercontent.com/100838547/224491227-92c48a4c-6169-4b7e-9375-3d224715f18c.png)
 
 * what is the running total of retail sales for each item type, order by month?
+QUERY:
+![image](https://user-images.githubusercontent.com/100838547/224491440-96150a79-b1a3-4807-a64d-e34b52c60d14.png)
+
+RESULT:
+
+![S7](https://user-images.githubusercontent.com/100838547/224491546-11d65523-edc9-4f63-820f-7473c1926e81.png)
+
+
 * what is the difference in retail sales between each month and the previous month, for each supplier and item type?
 * what is the average retail sales for each item type compared to the overall average retail sales across all item types for each year?
 * What is the percentage of retail sales for each supplier, compared to the total retail sales across all suppliers, broken down by year and month?
