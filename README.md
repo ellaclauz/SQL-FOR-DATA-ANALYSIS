@@ -5,7 +5,7 @@
 
 ## PostgreSQL project for analyzing warehouse and retail sales with the following questions.
 
-* what is the total retail sales for each supplier ?
+* what is the total retail sales for each supplier?
 * what is the total retail sales for each combination of supplier and month 
 * what is the maximum warehouse sales for each item description?
 * what is the average retail transfer for each year 
