@@ -68,10 +68,19 @@ RESULT:
 
 
 * what is the difference in retail sales between each month and the previous month, for each supplier and item type?
+QUERY:
+![image](https://user-images.githubusercontent.com/100838547/224491732-f5aa07e3-cc20-430b-be2c-39378579a454.png)
+
+RESULT:
+
+![S8](https://user-images.githubusercontent.com/100838547/224491808-dd42d7ad-695e-45c0-81e1-0fb823980eb2.png)
+
 * what is the average retail sales for each item type compared to the overall average retail sales across all item types for each year?
 * What is the percentage of retail sales for each supplier, compared to the total retail sales across all suppliers, broken down by year and month?
 * What is the month with the highest retail transfer for each supplier, for the past 12 months?
 
+
+NOTE: This is just a sample of the query and results
 
 
  
