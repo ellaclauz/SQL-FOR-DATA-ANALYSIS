@@ -43,6 +43,13 @@ RESULT:
 ![S4](https://user-images.githubusercontent.com/100838547/224490466-0d7f489f-88b2-4aad-8156-c5072dd131ca.png)
 
 * for each item description, what is the difference between the maximum and minimum retail sales? 
+QUERY:
+![image](https://user-images.githubusercontent.com/100838547/224490673-9d03f8ac-6d80-4380-9798-eb72a39fb24f.png)
+
+RESULT:
+
+![S5](https://user-images.githubusercontent.com/100838547/224490734-631015ab-8936-4c4a-9c73-3e3a399d0b68.png)
+
 * what is the total retail sales for each supplier, broken down by year and month 
 * what is the running total of retail sales for each item type, order by month?
 * what is the difference in retail sales between each month and the previous month, for each supplier and item type?
