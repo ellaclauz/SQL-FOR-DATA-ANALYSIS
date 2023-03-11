@@ -1,5 +1,9 @@
 # SQL-FOR-DATA-ANALYSIS
-PostgreSQL project for analyzing warehouse and retail sales with the following questions.
+
+
+![warehouse](https://user-images.githubusercontent.com/100838547/224486570-d7976cc8-bc0b-4a6e-a39f-1654016ceac8.jpg)
+
+## PostgreSQL project for analyzing warehouse and retail sales with the following questions.
 
 * what is the total retail sales for each supplier ?
 * what is the total retail sales for each combination of supplier and month 
