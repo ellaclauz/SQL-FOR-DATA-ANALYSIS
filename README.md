@@ -34,6 +34,14 @@ RESULT:
 ![S3](https://user-images.githubusercontent.com/100838547/224490291-90dffa9b-fa4e-4514-8df8-5f2ffbb4cb28.png)
 
 * what is the average retail transfer for each year 
+
+QUERY:
+![image](https://user-images.githubusercontent.com/100838547/224490403-6237613c-5cbb-49de-bed1-2c8238a72583.png)
+
+RESULT:
+
+![S4](https://user-images.githubusercontent.com/100838547/224490466-0d7f489f-88b2-4aad-8156-c5072dd131ca.png)
+
 * for each item description, what is the difference between the maximum and minimum retail sales? 
 * what is the total retail sales for each supplier, broken down by year and month 
 * what is the running total of retail sales for each item type, order by month?
