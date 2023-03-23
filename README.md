@@ -8,18 +8,22 @@
 * what is the total retail sales for each supplier?
 
  QUERY:
-![image](https://user-images.githubusercontent.com/100838547/224489252-b4907cbb-ec04-449d-90fc-78a64874a903.png)
-
+ ```sql
+ select supplier, sum(retailsales) as total_retail_sales
+from project 
+group by supplier;
+ ```
 RESULT:
 
 ![supply](https://user-images.githubusercontent.com/100838547/224489292-87e0be9c-c732-4b43-8bf8-565bbc054124.png)
 * what is the total retail sales for each combination of supplier and month
 
 QUERY:
-
-![image](https://user-images.githubusercontent.com/100838547/224489809-dd3ed56a-9d34-4d49-af5f-f946ffc23ae9.png)
-
-
+```sql
+select supplier, year, month, sum(retailsales) as total_retail_sales
+from project 
+group by supplier, year, month;
+```
 RESULT:
 
 ![S2](https://user-images.githubusercontent.com/100838547/224490032-fcd48f03-6b2a-4a76-a0f8-f4d74d25819d.png)
@@ -27,8 +31,11 @@ RESULT:
 * what is the maximum warehouse sales for each item description?
 
 QUERY:
-![image](https://user-images.githubusercontent.com/100838547/224490206-05217b28-21c9-4d4d-8285-40514de9a18e.png)
-
+```sql
+select itemdescription, max(retailsales) as max_warehouse_sales
+from project 
+group by itemdescription;
+```
 RESULT:
 
 ![S3](https://user-images.githubusercontent.com/100838547/224490291-90dffa9b-fa4e-4514-8df8-5f2ffbb4cb28.png)
@@ -36,7 +43,11 @@ RESULT:
 * what is the average retail transfer for each year 
 
 QUERY:
-![image](https://user-images.githubusercontent.com/100838547/224490403-6237613c-5cbb-49de-bed1-2c8238a72583.png)
+```sql
+select year, avg(retailtransfers) as avg_retail_transfers
+from project 
+group by year;
+```
 
 RESULT:
 
@@ -44,8 +55,11 @@ RESULT:
 
 * for each item description, what is the difference between the maximum and minimum retail sales? 
 QUERY:
-![image](https://user-images.githubusercontent.com/100838547/224490673-9d03f8ac-6d80-4380-9798-eb72a39fb24f.png)
-
+```sql
+select itemdescription, max(retailsales) - min(retailsales) as diff_max_min_retail_sales
+from project 
+group by itemdescription;
+```
 RESULT:
 
 ![S5](https://user-images.githubusercontent.com/100838547/224490734-631015ab-8936-4c4a-9c73-3e3a399d0b68.png)
@@ -53,14 +67,22 @@ RESULT:
 * what is the total retail sales for each supplier, broken down by year and month 
 
 QUERY:
-![image](https://user-images.githubusercontent.com/100838547/224491141-5c06e507-4b74-44ab-8687-8aa280bbe7d1.png)
-RESULT:
+```sql
+select year, month, supplier,
+       sum(retailsales) over (partition by supplier, year, month) as total_retail_sales
+from project;
+```
 
+RESULT:
 ![S6](https://user-images.githubusercontent.com/100838547/224491227-92c48a4c-6169-4b7e-9375-3d224715f18c.png)
 
 * what is the running total of retail sales for each item type, order by month?
 QUERY:
-![image](https://user-images.githubusercontent.com/100838547/224491440-96150a79-b1a3-4807-a64d-e34b52c60d14.png)
+```sql
+select year, month, itemtype,
+       sum(retailsales) over (partition by itemtype order by month) as running_total_retail_sales
+from project;
+```
 
 RESULT:
 
@@ -69,7 +91,11 @@ RESULT:
 
 * what is the difference in retail sales between each month and the previous month, for each supplier and item type?
 QUERY:
-![image](https://user-images.githubusercontent.com/100838547/224491732-f5aa07e3-cc20-430b-be2c-39378579a454.png)
+```sql
+select year, month, supplier, itemtype,
+       retailsales - lag(retailsales) over (partition by supplier, itemtype order by year, month) as diff_retail_sales
+from project; 
+```
 
 RESULT:
 
